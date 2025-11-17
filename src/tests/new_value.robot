@@ -10,8 +10,8 @@ Suite Teardown  Close Browser
 Test Setup  Reset Counter
 
 *** Test Cases ***
-When counter has a nonzero value and it is reset the value becomes zero
+When counter is given a value it becomes the counter's new value
     Go To  ${HOME_URL}
-    Click Button  Paina
-    Click Button  Nollaa
-    Page Should Contain  nappia painettu 0 kertaa
+    Input Text  value  5
+    Click Button  Aseta
+    Page Should contain  nappia painettu 5 kertaa

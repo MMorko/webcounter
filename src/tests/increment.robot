@@ -1,7 +1,13 @@
+*** Keywords ***
+Reset Counter
+    Go To  ${HOME_URL}
+    Click Button  Nollaa
+
 *** Settings ***
 Resource  resource.robot
 Suite Setup  Open And Configure Browser
 Suite Teardown  Close Browser
+Test Setup  Reset Counter
 
 *** Test Cases ***
 At start the counter is zero
